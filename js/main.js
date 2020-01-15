@@ -19,6 +19,10 @@ var vm = new Vue({
       { name: "Marvel's The Avengers", thumb: "avengers.jpg", vidsource: "avengers.mp4", description: "will they make black widow action figures this time?" }
     ],
 
+    videotitle: "video title goes here",
+    vidsource:"",
+    videodescription: "", 
+
     showDetails: false
   },
 
@@ -37,6 +41,17 @@ var vm = new Vue({
       //the expression evaluates to true or false - if its true, set the value equal to 
       // the left of the colon. If its false, set the value equal to the right 
       this.user.isLoggedIn = (this.user.isLoggedIn) ? false : true;
+    }, 
+
+    showMovieDetails({name, vidsource, description}){
+      // console.log('show these movie details: ' , movie);
+
+      this.videotitle = name; 
+      this.vidsource = vidsource;
+      this.videodescription = description;
+
+      // make the video details display
+      this.showDetails = true;
     }
 
   }
