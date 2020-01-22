@@ -2,7 +2,7 @@
     require('connect.php');
 
     function getUser($conn) {
-        $getData = 'SELECT * FROM user';
+        $getData = 'SELECT * FROM users';
         $runQuery = $conn->query($getData);
 
         $result = array();

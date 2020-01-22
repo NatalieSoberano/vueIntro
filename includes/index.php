@@ -1,5 +1,5 @@
 <?php 
-include ('functions.php');
+include('functions.php');
 
 //if were passing a user key in the $_GET superglobal, the go to get a user
 

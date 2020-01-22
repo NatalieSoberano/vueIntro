@@ -1,6 +1,6 @@
 // todo => use a key to track the current video, or just pass the video in as a ref to the function and grab its source
 
-Vue.compoent('player', {
+Vue.component('player', {
   props: ['movie'], //the container for the data that is going to flow into the component 
     // allows our html that is currently our object to gain data like videocontrols 
   template: `
