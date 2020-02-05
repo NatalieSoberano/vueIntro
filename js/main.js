@@ -1,4 +1,5 @@
-// todo => use a key to track the current video, or just pass the video in as a ref to the function and grab its source
+//imports
+import UsersComponent from './components/UsersComponent.js';
 
 Vue.component('player', {
   props: ['movie'], //the container for the data that is going to flow into the component 
@@ -14,7 +15,16 @@ Vue.component('player', {
   `
 }) // componenets take a name and a object - 'poster' is name here
 
+const router = new VueRouter ({
+  routes: [
+    {path: "/", name: "home", component: UsersComponent}
+  ]
+})
+
+
 var vm = new Vue({
+  router,
+
   el: "#app",
 
   data: {
@@ -44,7 +54,7 @@ var vm = new Vue({
   created: function(){
     //run a fetch call and get the user data 
     console.log('created lifecycle hook fired here, go get user data');
-    this.getUserData();
+    //this.getUserData();
   },
 
   //methods are the functionality
